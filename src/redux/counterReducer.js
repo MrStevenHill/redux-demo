@@ -1,4 +1,4 @@
-import { createReducer } from "./helpers";
+import { createReducer } from "./utility";
 
 export const counterInitialState = { value: 0 };
 
@@ -18,7 +18,7 @@ function setCounter(counterState, action) {
   return { ...counterState, value: parseInt(action.value) };
 }
 
-const counterReducer = createReducer([], {
+const counterReducer = createReducer(counterInitialState, {
   INCREMENT_COUNTER: incrementCounter,
   DECREMENT_COUNTER: decrementCounter,
   RESET_COUNTER: resetCounter,
