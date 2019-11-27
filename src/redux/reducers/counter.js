@@ -1,6 +1,6 @@
-import { createReducer } from "./utility";
+import { createReducer } from "../utility";
 
-export const counterInitialState = { value: 0 };
+const initialState = { value: 0 };
 
 function incrementCounter(counterState) {
   return { ...counterState, value: counterState.value + 1 };
@@ -18,11 +18,11 @@ function setCounter(counterState, action) {
   return { ...counterState, value: parseInt(action.value) };
 }
 
-const counterReducer = createReducer(counterInitialState, {
+const counter = createReducer(initialState, {
   INCREMENT_COUNTER: incrementCounter,
   DECREMENT_COUNTER: decrementCounter,
   RESET_COUNTER: resetCounter,
   SET_COUNTER: setCounter
 });
 
-export default counterReducer;
+export default counter;
