@@ -3,7 +3,7 @@ import {
   DECREMENT_COUNTER,
   RESET_COUNTER,
   SET_COUNTER
-} from "./actionTypes";
+} from "./counterActionTypes";
 
 const initialState = {
   counter: 0

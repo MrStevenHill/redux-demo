@@ -6,7 +6,7 @@ import {
   decrementCounter,
   setCounter,
   resetCounter
-} from "../redux/actions";
+} from "../redux/counterActions";
 
 const Counter = ({ value, increment, decrement, set, reset }) => {
   return (
